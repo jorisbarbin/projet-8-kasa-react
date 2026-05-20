@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
+import '/src/styles/Header.css'
 
 function Header() {
   return (
-    <header>
+    <header className="header">
         <img src="/logo.png" alt="Logo Kasa" />
-        <h1>Kasa</h1>
-        <nav>
+        <nav className="header-nav">
           <Link to="/">Accueil</Link>
           <Link to="/about">À propos</Link>
 
