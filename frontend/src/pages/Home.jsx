@@ -1,5 +1,12 @@
+import Banner from "../components/Banner"
+
 function Home() {
-  return <h1>Page d'accueil</h1>
+  return (
+  <section className="home">
+    <Banner />
+    <p>Bienvenue sur notre site !</p>
+  </section>
+  )
 }
 
 export default Home
