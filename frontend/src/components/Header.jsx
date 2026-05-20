@@ -8,7 +8,6 @@ function Header() {
         <nav className="header-nav">
           <Link to="/">Accueil</Link>
           <Link to="/about">À propos</Link>
-
         </nav>
     </header>
   )
