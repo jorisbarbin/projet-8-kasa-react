@@ -1,10 +1,10 @@
 import '/src/styles/Banner.css'
 
-function Banner() {
+function Banner({ image, title }) {
   return (
     <section className="banner">
-      <img className="banner-image" src="/FalaiseSource1.png" alt="Bannière Kasa" />
-      <h1 className="banner-title">Chez vous, partout et ailleurs</h1>
+      <img src={image} alt="Bannière Kasa" />
+      <h1>{title}</h1>
     </section>
   )
 }

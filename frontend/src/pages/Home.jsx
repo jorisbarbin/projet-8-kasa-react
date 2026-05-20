@@ -3,8 +3,7 @@ import Banner from "../components/Banner"
 function Home() {
   return (
   <section className="home">
-    <Banner />
-    <p>Bienvenue sur notre site !</p>
+    <Banner image="/FalaiseSource1.png" title="Chez vous, partout et ailleurs" />
   </section>
   )
 }
