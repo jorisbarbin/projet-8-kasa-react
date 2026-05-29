@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Error from './Error'
 import Slideshow from '../components/Slideshow'
+import Collapse from '../components/Collapse'
 
 function Housing() {
   const { id } = useParams()
@@ -27,11 +28,12 @@ function Housing() {
   }
 
   return (
+    <>
     <section className="housing">
       <Slideshow pictures={property.pictures} />
       <h1>{property.title}</h1>
       <p>{property.location}</p>
-      <p>{property.description}</p>
+
       <p>{property.host.name}</p>
       <img src={property.host.picture} alt={property.host.name} />
       {property.tags.map((tag) => (
@@ -46,6 +48,11 @@ function Housing() {
       ))}
 
     </section>
+  <section className="housing-collapse">
+      <Collapse title="Description" content={<p>{property.description}</p>} />
+      <Collapse title="Équipements" content={<ul>{property.equipments.map((equipment) => (<li key={equipment}>{equipment}</li>))}</ul>} />
+  </section>
+  </>
   )
 }
 
