@@ -15,14 +15,14 @@ function Slideshow({ pictures }) {
   return (
     <div className="slideshow">
       <img className="Picture-slide" src={pictures[currentIndex]} alt="Logement" />
-        {pictures.length > 1 && ( 
-            <img src="/left-arrow.png" alt="Flèche gauche" className="arrow-left" onClick={previousSlide} />
-        )}
-        {pictures.length > 1 && (
+      {pictures.length > 1 && (
+        <img src="/left-arrow.png" alt="Flèche gauche" className="arrow-left" onClick={previousSlide} />
+      )}
+      {pictures.length > 1 && (
         <img src="/right-arrow.png" alt="Flèche suivante" className="arrow arrow-right" onClick={nextSlide} />
-        )}
+      )}
     </div>
-)
+  )
 
 }
 

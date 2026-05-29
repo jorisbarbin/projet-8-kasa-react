@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import Error from './Error'
 import Slideshow from '../components/Slideshow'
 import Collapse from '../components/Collapse'
+import '../styles/Housing.css'
 
 function Housing() {
   const { id } = useParams()
@@ -29,30 +30,49 @@ function Housing() {
 
   return (
     <>
-    <section className="housing">
-      <Slideshow pictures={property.pictures} />
-      <h1>{property.title}</h1>
-      <p>{property.location}</p>
+      <div className='housing'>
+        <Slideshow pictures={property.pictures} />
 
-      <p>{property.host.name}</p>
-      <img src={property.host.picture} alt={property.host.name} />
-      {property.tags.map((tag) => (
-        <span key={tag} className="tagHousing">{tag}</span>
-      ))}
-      {[1, 2, 3, 4, 5].map((index) => (
-        <img className="star-icon"
-          key={index}
-          src={index <= Number(property.rating) ? "/star-active.png" : "/star-inactive.png"}
-          alt={index <= Number(property.rating) ? "Icône d'étoile pleine" : "Icône d'étoile vide"}
-        />
-      ))}
+        <section className="housing-main">
 
-    </section>
-  <section className="housing-collapse">
-      <Collapse title="Description" content={<p>{property.description}</p>} />
-      <Collapse title="Équipements" content={<ul>{property.equipments.map((equipment) => (<li key={equipment}>{equipment}</li>))}</ul>} />
-  </section>
-  </>
+          <div className="housing-info">
+
+            <h1 className='housing-title'>{property.title}</h1>
+
+            <p className='housing-location'>{property.location}</p>
+
+            <div className='housing-all-tags'>
+              {property.tags.map((tag) => (
+                <span key={tag} className="housing-tag">{tag}</span>
+              ))}
+            </div>
+          </div>
+
+          <div className='housing-host-rating'>
+
+            <div className='housing-rating'>
+              <p className='housing-host-name'>{property.host.name}</p>
+
+              <img className='housing-host-picture' src={property.host.picture} alt={property.host.name} />
+            </div>
+
+            <div className='housing-rating'>
+              {[1, 2, 3, 4, 5].map((index) => (
+                <img className="housing-star"
+                  key={index}
+                  src={index <= Number(property.rating) ? "/star-active.png" : "/star-inactive.png"}
+                  alt={index <= Number(property.rating) ? "Icône d'étoile pleine" : "Icône d'étoile vide"}
+                />))}
+            </div>
+          </div>
+        </section>
+
+        <section className="housing-collapse">
+          <Collapse title="Description" content={<p>{property.description}</p>} />
+          <Collapse title="Équipements" content={<ul>{property.equipments.map((equipment) => (<li key={equipment}>{equipment}</li>))}</ul>} />
+        </section>
+      </div>
+    </>
   )
 }
 

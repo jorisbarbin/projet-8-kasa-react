@@ -1,0 +1,93 @@
+.housing-main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.housing-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.housing-host-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.housing-host {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.housing-rating {
+    display: flex;
+    gap: 8px;
+}
+
+.housing-title {
+    color: #FF6060;
+    font-size: 36px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.housing-location {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 5px 0 20px;
+}
+
+.housing-all-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.housing-tag {
+    background-color: #FF6060;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 5px 30px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.housing-host-name {
+    color: #FF6060;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: right;
+    max-width: 100px;
+    margin: 0;
+}
+
+.housing-host-picture {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.housing-rating {
+    margin-top: 20px;
+}
+
+.housing-star {
+    width: 24px;
+    height: 24px;
+}
+
+.housing-collapse {
+    display: flex;
+    gap: 76px;
+    margin-top: 24px;
+}
+
+.housing-collapse .collapse {
+    flex: 1;
+    max-width: none;
+    margin: 0;
+}
