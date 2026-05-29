@@ -1,9 +1,12 @@
 .collapse {
-    margin: 20px 200px;
     max-width: 1023px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
-.collapse h2 {
+.collapse-title {
     display: flex;
     padding: 10px;
     background-color: #FF6060;
@@ -16,14 +19,10 @@
     justify-content: flex-start;
 }
 
-.collapse img {
+.collapse-image {
     width: 32px;
     height: 32px;
     margin-left: auto;
-    transition: transform 0.3s ease;
-}
-
-.collapse-icon {
     transition: transform 0.3s ease;
 }
 
