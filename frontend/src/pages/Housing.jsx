@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Error from './Error'
+import Slideshow from '../components/Slideshow'
 
 function Housing() {
   const { id } = useParams()
@@ -27,7 +28,7 @@ function Housing() {
 
   return (
     <section className="housing">
-      <img src={property.cover} alt={property.title} />
+      <Slideshow pictures={property.pictures} />
       <h1>{property.title}</h1>
       <p>{property.location}</p>
       <p>{property.description}</p>
