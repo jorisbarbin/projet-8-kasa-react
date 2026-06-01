@@ -1,0 +1,6 @@
+@media (max-width: 768px) {
+    .about-collapses {
+        max-width: 100%;
+        gap: 20px;
+  }
+}

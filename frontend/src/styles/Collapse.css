@@ -29,3 +29,25 @@
 .collapse-icon-open {
     transform: rotate(-180deg);
 }
+
+@media (max-width: 768px) {
+    .collapse {
+        max-width: 100%;
+        gap: 20px;
+    }
+
+    .collapse-title {
+        font-size: 13px;
+        padding: 10px;
+        margin-bottom: 0;
+    }
+
+    .collapse-image {
+        width: 24px;
+        height: 24px;
+    }
+
+    .collapse-content {
+        font-size: 12px;
+    }
+}

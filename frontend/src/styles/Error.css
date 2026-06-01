@@ -22,3 +22,22 @@
     font-weight: 500;
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+    .error {
+        padding: 80px 20px;
+    }
+
+    .error-title {
+        font-size: 96px;
+    }
+
+    .error-text {
+        font-size: 18px;
+        margin: 80px 0;
+    }
+
+    .error-link {
+        font-size: 14px;
+    }
+}

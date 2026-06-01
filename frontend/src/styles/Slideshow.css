@@ -33,3 +33,17 @@
     object-fit: cover;
     transition: opacity 30s ease-in-out;
 }
+
+@media (max-width: 768px) {
+    .slideshow {
+        width: 100%;
+        height: 255px;
+        border-radius: 10px;
+    }
+
+    .arrow-left,
+    .arrow-right {
+        width: 24px;
+        height: 24px;
+    }
+}
