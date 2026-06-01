@@ -19,43 +19,31 @@ function Housing() {
         setIsLoading(false)
       })
   }, [id])
-
   if (isLoading) {
     return <p>Chargement en cours...</p>
   }
-
   if (!property) {
     return <Error />
   }
-
   return (
     <>
       <div className='housing'>
         <Slideshow pictures={property.pictures} />
-
         <section className="housing-main">
-
           <div className="housing-info">
-
             <h1 className='housing-title'>{property.title}</h1>
-
             <p className='housing-location'>{property.location}</p>
-
             <div className='housing-all-tags'>
               {property.tags.map((tag) => (
                 <span key={tag} className="housing-tag">{tag}</span>
               ))}
             </div>
           </div>
-
           <div className='housing-host-rating'>
-
-            <div className='housing-rating'>
+            <div className='housing-host'>
               <p className='housing-host-name'>{property.host.name}</p>
-
               <img className='housing-host-picture' src={property.host.picture} alt={property.host.name} />
             </div>
-
             <div className='housing-rating'>
               {[1, 2, 3, 4, 5].map((index) => (
                 <img className="housing-star"
@@ -66,7 +54,6 @@ function Housing() {
             </div>
           </div>
         </section>
-
         <section className="housing-collapse">
           <Collapse title="Description" content={<p>{property.description}</p>} />
           <Collapse title="Équipements" content={<ul>{property.equipments.map((equipment) => (<li key={equipment}>{equipment}</li>))}</ul>} />
