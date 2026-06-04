@@ -21,6 +21,11 @@ function Slideshow({ pictures }) {
       {pictures.length > 1 && (
         <img src="/right-arrow.png" alt="Flèche suivante" className="arrow arrow-right" onClick={nextSlide} />
       )}
+      {pictures.length > 1 && (
+        <p className="slideshow-counter">
+          {currentIndex + 1} / {pictures.length}
+        </p>
+      )}
     </div>
   )
 

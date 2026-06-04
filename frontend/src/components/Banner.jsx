@@ -9,4 +9,4 @@ function Banner({ image, title }) {
   )
 }
 
-export default Banner
+export default Banner 

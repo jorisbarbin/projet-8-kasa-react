@@ -23,6 +23,10 @@
   text-decoration: underline;
 }
 
+.header-nav a.active {
+  text-decoration: underline;
+}
+
 .header-logo {
   width: 210px;
 }
