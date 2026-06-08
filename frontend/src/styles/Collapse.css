@@ -21,12 +21,10 @@
 }
 
 .collapse-image {
-    display: flex;
     width: 32px;
     height: 32px;
     margin-left: auto;
     transition: transform 0.3s ease;
-    align-items: center;
 }
 
 .collapse-icon-open {

@@ -15,3 +15,10 @@ a {
 img {
     max-width: 100%;
 }
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
