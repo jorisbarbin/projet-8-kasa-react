@@ -10,7 +10,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(60%);
+    filter: brightness(70%);
 }
 
 .banner-title {
@@ -23,11 +23,10 @@
     font-size: 48px;
     font-weight: 700;
     margin: 0;
-    -webkit-text-stroke: 1px #000000;
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.65);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .banner {
         height: 111px;
         border-radius: 10px;
@@ -39,6 +38,6 @@
         justify-content: flex-start;
         text-align: left;
         padding-left: 16px;
-        max-width: 230px;
+        max-width: 245px;
     }
 }

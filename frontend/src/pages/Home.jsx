@@ -17,7 +17,9 @@ function Home() {
   return (
     <>
       <section className="home">
-        <Banner image="/FalaiseSource1.png" title="Chez vous, partout et ailleurs" />
+        <Banner 
+        image="/FalaiseSource1.png" 
+        title="Chez vous, partout et ailleurs" />
       </section>
       <section className="card-section">
         {properties.map((property) => (

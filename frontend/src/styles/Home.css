@@ -8,6 +8,10 @@
     gap: 50px 60px;
 }
 
+.home .banner-image {
+    filter: brightness(30%);
+}
+
 @media (max-width: 768px) {
     .card-section {
         background-color: transparent;
