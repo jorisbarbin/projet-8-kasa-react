@@ -15,11 +15,11 @@ function Collapse({ title, content }) {
                     alt="Icône du collapse"
                 />
             </button>
-            {isOpen && (
+            <div className={`collapse-content-wrapper ${isOpen ? "collapse-content-open" : ""}`}>
                 <div className="collapse-content">
                     {content}
                 </div>
-            )}
+            </div>
         </section>
     )
 }

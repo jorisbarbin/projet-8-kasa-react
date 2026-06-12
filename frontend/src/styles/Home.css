@@ -12,6 +12,14 @@
     filter: brightness(30%);
 }
 
+.home-error {
+    color: #ff6060;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 30px 0;
+}
+
 @media (max-width: 768px) {
     .card-section {
         background-color: transparent;
