@@ -9,18 +9,38 @@ function Housing() {
   const { id } = useParams()
   const [property, setProperty] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
+  const [apiError, setApiError] = useState(false)
 
-  useEffect(() => {
-    fetch("http://localhost:8080/api/properties")
-      .then((response) => response.json())
-      .then((data) => {
-        const selectedProperty = data.find((property) => property.id === id)
-        setProperty(selectedProperty)
-        setIsLoading(false)
-      })
-  }, [id])
+useEffect(() => {
+  setIsLoading(true)
+  setApiError(false)
+
+  fetch("http://localhost:8080/api/properties")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Erreur lors de la récupération du logement")
+      }
+      return response.json()
+    })
+    .then((data) => {
+      const selectedProperty = data.find((property) => property.id === id)
+      setProperty(selectedProperty)
+    })
+    .catch((error) => {
+      console.error(error)
+      setApiError(true)
+      setProperty(null)
+    })
+    .finally(() => {
+      setIsLoading(false)
+    })
+}, [id])
+
   if (isLoading) {
-    return <p>Chargement en cours...</p>
+    return <p className='housing-loading'>Chargement en cours...</p>
+  }
+  if (apiError) {
+  return <p className='housing-error'>Les informations du logement ne sont pas disponibles pour le moment.</p>
   }
   if (!property) {
     return <Error />
