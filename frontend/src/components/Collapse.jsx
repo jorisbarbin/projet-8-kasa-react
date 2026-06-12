@@ -15,7 +15,7 @@ function Collapse({ title, content }) {
                     alt="Icône du collapse"
                 />
             </button>
-            <div className={`collapse-content-wrapper ${isOpen ? "collapse-content-open" : ""}`}>
+            <div className={`collapse-content-wrapper ${isOpen ? "collapse-content-wrapper-open" : ""}`}>
                 <div className="collapse-content">
                     {content}
                 </div>

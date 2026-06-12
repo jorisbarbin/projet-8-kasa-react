@@ -35,16 +35,19 @@
 }
 
 .collapse-content-wrapper {
-    max-height: 0;
+    display: grid;
+    grid-template-rows: 0fr;
     overflow: hidden;
-    transition: max-height 0.5s ease;
+    transition: grid-template-rows 0.35s ease;
 }
 
-.collapse-content-open {
-    max-height: 500px;
+.collapse-content-wrapper-open {
+    grid-template-rows: 1fr;
 }
 
 .collapse-content {
+    min-height: 0;
+    overflow: hidden;
     line-height: 1.5;
     font-size: 18px;
     padding: 0 20px;
