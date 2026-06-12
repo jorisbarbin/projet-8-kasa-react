@@ -7,14 +7,14 @@ function Collapse({ title, content }) {
 
     return (
         <section className="collapse">
-            <h2 className="collapse-title" onClick={() => setIsOpen(!isOpen)}>
+            <button className="collapse-title" onClick={() => setIsOpen(!isOpen)}>
                 {title}
                 <img
                     className={`collapse-image ${isOpen ? "collapse-icon-open" : ""}`}
                     src="/DropIcon.png"
                     alt="Icône du collapse"
                 />
-            </h2>
+            </button>
             {isOpen && (
                 <div className="collapse-content">
                     {content}
